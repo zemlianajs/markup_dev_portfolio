@@ -46,20 +46,4 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-:root {
-  --bg:#f3f0f0;
-}
-
-body {
-  border: 80px solid #ff9d94;
-  height: 100%;
-  min-height: 100vh;
-  position: relative;
-  background-color: var(--bg);
-}
-
-navigation {
-  position: absolute;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=reset.css.map */
