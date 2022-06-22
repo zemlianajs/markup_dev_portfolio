@@ -48,18 +48,59 @@ table {
   border-spacing: 0;
 }
 
-:root {
-  --bg:#f3f0f0;
-}
-
-body {
-  border: 80px solid #ff9d94;
-  height: 100%;
+.wrapper {
   min-height: 100vh;
-  position: relative;
-  background-color: var(--bg);
+  min-width: 1440px;
+  display: flex;
+  font-family: Roboto, sans-serif;
+  flex-direction: column;
+  color: #17252A;
 }
 
-navigation {
+.main {
+  display: flex;
+  flex-grow: 1;
+}
+
+.footer {
+  flex: 0 0 80px;
+}
+
+.header {
+  flex: 0 0 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 80px;
+  align-items: flex-end;
+}
+.header .header-logo {
+  color: #17252A;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.header-theme-control {
+  background: none;
+  border: none;
+}
+
+.navigation {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  right: 0;
+  top: 0;
+  width: 80px;
+  align-items: center;
+}
+.navigation .navigation__link {
+  margin: 10px;
+}
+
+.content {
+  flex-grow: 1;
+  background-color: #DEF2F1;
+  margin: 0 80px;
 }/*# sourceMappingURL=style.css.map */
