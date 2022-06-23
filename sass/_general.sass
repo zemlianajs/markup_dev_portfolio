@@ -1,12 +1,27 @@
-.wrapper   
-    min-height: 100vh
+.body
+    background: $bg-color
     min-width: 1440px
-    display: flex   
+
+.wrapper
     font-family: $font-stack
-    flex-direction: column
+    font-weight: $font-weight
+    margin: 80px 80px 0
+    height: calc(100vh - 160px)
+
+.link
+    text-decoration: none
     color: $content-color
-.main 
-    display: flex
-    flex-grow: 1
-.footer 
-    flex: 0 0 80px
+
+.label
+    font-size: 18px
+    font-style: italic
+    line-height: 1.2
+    font-weight: $font-weight
+
+.header
+    position: fixed
+    left: 0
+    top: 0
+    height: 80px
+    width: 100%
+    z-index: 5

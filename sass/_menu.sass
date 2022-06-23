@@ -1,0 +1,50 @@
+.menu
+    position: fixed
+    top: 80px
+    width: 50%
+    left: -50%
+    height: calc(100vh - 160px)
+    transition: all 1000ms ease
+    background: $bg-color
+
+.open
+    .menu
+        z-index: 1
+        left: 0
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 0 160px     
+
+    .menu__list
+        margin-bottom: 80px
+
+    .menu__item
+        margin-bottom: 32px
+
+        &:last-child
+            margin-bottom: 0
+
+    .menu__item_link
+        font-size: 32px
+        font-weight: 900
+        line-height: 1.2
+        &:hover 
+           text-decoration: underline
+           color: $accent-color
+    
+    .menu__contact
+        .phone
+            margin-bottom: 80px
+
+    .mail__label
+        color: $btn-color
+        margin-bottom: 16px
+    
+    .mail__to
+        font-size: 32px
+        font-weight: 900
+        line-height: 1.2
+
+    .mail__to_vector
+        margin: 5px 16px
