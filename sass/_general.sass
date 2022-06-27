@@ -1,12 +1,14 @@
 .body
-    background: $bg-color
+    background: $bg-color-first
     min-width: 1440px
+    min-height: 100vh
+    
+    .lock
+        overflow: hidden
 
 .wrapper
     font-family: $font-stack
     font-weight: $font-weight
-    margin: 80px 80px 0
-    height: calc(100vh - 160px)
 
 .link
     text-decoration: none
@@ -18,10 +20,48 @@
     line-height: 1.2
     font-weight: $font-weight
 
-.header
+.title    
+    font-size: 32px
+    font-weight: 900
+    line-height: 1.2
+
+.text
+    font-size: 32px
+    font-weight: 400
+    line-height: 1.2
+
+.scroll
     position: fixed
-    left: 0
-    top: 0
-    height: 80px
-    width: 100%
-    z-index: 5
+    z-index: 25
+    bottom: 40px
+    right: 50%
+
+.open
+    .scroll
+        right: 80px
+
+.off
+    .scrolld
+        opacity: 0
+
+.section__title
+    font-size: 80px
+    font-weight: 900
+    line-height: 1.2
+
+.back-to-top
+    fill: $btn-color
+    position: fixed
+    bottom: -100px
+    right: 44px
+    cursor: pointer
+    transition: 0.3s all
+    z-index: 35
+    text-decoration: none  
+    padding: 10px 12px
+    & svg
+        transform: rotate(180deg)
+
+.active-btn
+  bottom: 50px
+  transition: 0.4s all

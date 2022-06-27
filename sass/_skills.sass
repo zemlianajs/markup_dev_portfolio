@@ -1,0 +1,43 @@
+.skills-block
+    background: $bg-color-second
+    height: 100%
+    padding: 80px 160px 160px
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.skill 
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 32px
+
+.skills-block_title
+    margin-bottom: 32px
+    
+.skill__name
+    font-size: 32px
+    font-weight: 400
+    line-height: 1.2
+
+.skill__bar
+    height: 14px
+    background-color: $bg-color-second    
+    border-radius: 7px
+    max-width: 680px
+    width: 100%
+
+@keyframes progress-bar
+  0%
+    width: 14px
+    height: 14px
+
+.active
+    & .skill__bar_per
+        height: 14px
+        background-color: $btn-color
+        max-width: 680px
+        border-radius: 7px
+        width: 100%
+        animation: progress-bar 5s
