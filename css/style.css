@@ -53,8 +53,9 @@ table {
   min-width: 1440px;
   min-height: 100vh;
 }
-.body .lock {
-  overflow: hidden;
+
+.lock .wrapper {
+  padding-left: 30%;
 }
 
 .wrapper {
@@ -125,6 +126,10 @@ table {
 .active-btn {
   bottom: 50px;
   transition: 0.4s all;
+}
+
+.lock {
+  overflow: hidden;
 }
 
 .border > * {
@@ -258,10 +263,9 @@ table {
 .menu {
   position: fixed;
   top: 0;
-  width: 50%;
+  width: 30%;
   left: -50%;
   height: 100%;
-  transition: all 1000ms ease;
   background: #FEFFFF;
 }
 
@@ -468,6 +472,7 @@ table {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 32px;
+  flex-wrap: wrap;
 }
 
 .skills-block_title {
@@ -484,8 +489,8 @@ table {
   height: 14px;
   background-color: #DEF2F1;
   border-radius: 7px;
-  max-width: 680px;
-  width: 100%;
+  flex: 0 1 680px;
+  border: 1px solid #2B7278;
 }
 
 @-webkit-keyframes progress-bar {
