@@ -1,7 +1,7 @@
 .body
     background: $bg-color-first
     min-width: 1440px
-    min-height: 100vh  
+    min-height: 100vh 
 
 .lock
     & .wrapper
@@ -10,6 +10,7 @@
 .wrapper
     font-family: $font-stack
     font-weight: $font-weight
+    line-height: 1.2
 
 .link
     text-decoration: none
@@ -18,18 +19,14 @@
 .label
     font-size: 18px
     font-style: italic
-    line-height: 1.2
-    font-weight: $font-weight
 
 .title    
     font-size: 32px
     font-weight: 900
-    line-height: 1.2
 
 .text
     font-size: 32px
     font-weight: 400
-    line-height: 1.2
 
 @keyframes scroll_animated
     99%
@@ -45,7 +42,6 @@
         opacity: 0       
 
 .scroll 
-    & svg
     position: fixed
     z-index: 25
     bottom: 40px
@@ -55,7 +51,6 @@
 .section__title
     font-size: 80px
     font-weight: 900
-    line-height: 1.2
 
 .back-to-top
     position: fixed
@@ -68,6 +63,7 @@
     padding: 10px 12px
     & svg
         transform: rotate(180deg) 
+
 .back_to_top__txt
     color: $btn-color        
 
@@ -75,8 +71,6 @@
   bottom: -15px
   transition: transform 400ms ease 0ms
   animation: top_animated 500ms linear infinite alternate forwards
-
-
 
 @media only screen and (min-width: 1024px) and (max-width: 1439px)
 

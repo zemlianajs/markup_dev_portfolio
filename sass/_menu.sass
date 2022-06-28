@@ -2,18 +2,18 @@
     position: fixed
     top: 0
     width: 30%
-    left: -50%
+    left: -30%
     height: 100%
     background: $bg-color
+    transition: 0.7s ease 0s
 
 .open
     .menu
         z-index: 4
         left: 0
-        display: flex
-        flex-direction: column
-        justify-content: center
-        padding: 0 160px   
+        display: block
+        padding: 160px  
+        transition: 0.7s ease 0s
 
     .menu__list
         margin-bottom: 80px
@@ -27,13 +27,10 @@
     .menu__item_link
         font-size: 32px
         font-weight: 900
-        line-height: 1.2
         &:hover 
-            -o-transform: translateX(20px)
-            -ms-transform: translateX(20px)
-            -moz-transform: translateX(20px)
-            -webkit-transform: translateX(20px)
-            transform: translateX(20px)
+            font-size: 36px
+            transition: all 0.2s linear 0s
+            text-decoration: underline
     
     .menu__contact
         .phone
@@ -46,7 +43,6 @@
     .mail__to
         font-size: 32px
         font-weight: 900
-        line-height: 1.2
 
     .mail__to_vector
         margin: 5px 16px

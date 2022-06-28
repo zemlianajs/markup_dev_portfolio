@@ -61,6 +61,7 @@ table {
 .wrapper {
   font-family: Roboto, sans-serif;
   font-weight: 400;
+  line-height: 1.2;
 }
 
 .link {
@@ -71,20 +72,16 @@ table {
 .label {
   font-size: 18px;
   font-style: italic;
-  line-height: 1.2;
-  font-weight: 400;
 }
 
 .title {
   font-size: 32px;
   font-weight: 900;
-  line-height: 1.2;
 }
 
 .text {
   font-size: 32px;
   font-weight: 400;
-  line-height: 1.2;
 }
 
 @-webkit-keyframes scroll_animated {
@@ -130,10 +127,10 @@ table {
   -webkit-animation: scroll_animated 500ms linear 11 alternate forwards;
           animation: scroll_animated 500ms linear 11 alternate forwards;
 }
+
 .section__title {
   font-size: 80px;
   font-weight: 900;
-  line-height: 1.2;
 }
 
 .back-to-top {
@@ -198,7 +195,6 @@ table {
 .logo {
   position: fixed;
   font-size: 18px;
-  line-height: 21px;
   top: 43px;
   left: 80px;
   z-index: 25;
@@ -304,23 +300,27 @@ table {
 .nav-social .nav-social__link {
   margin: 10px;
 }
+.nav-social .nav-social__link:hover {
+  transform: rotate(360deg) scale(1.2);
+  transition: all 0.3s linear 0s;
+}
 
 .menu {
   position: fixed;
   top: 0;
   width: 30%;
-  left: -50%;
+  left: -30%;
   height: 100%;
   background: #FEFFFF;
+  transition: 0.7s ease 0s;
 }
 
 .open .menu {
   z-index: 4;
   left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 160px;
+  display: block;
+  padding: 160px;
+  transition: 0.7s ease 0s;
 }
 .open .menu__list {
   margin-bottom: 80px;
@@ -334,10 +334,11 @@ table {
 .open .menu__item_link {
   font-size: 32px;
   font-weight: 900;
-  line-height: 1.2;
 }
 .open .menu__item_link:hover {
-  transform: translateX(20px);
+  font-size: 36px;
+  transition: all 0.2s linear 0s;
+  text-decoration: underline;
 }
 .open .menu__contact .phone {
   margin-bottom: 80px;
@@ -349,7 +350,6 @@ table {
 .open .mail__to {
   font-size: 32px;
   font-weight: 900;
-  line-height: 1.2;
 }
 .open .mail__to_vector {
   margin: 5px 16px;
@@ -377,8 +377,8 @@ table {
   background-color: #DEF2F1;
   position: relative;
   width: 100%;
-  top: 0;
   height: 100vh;
+  top: 0;
   padding: 80px;
 }
 .welcome__title .welcome__title_text {
@@ -387,7 +387,6 @@ table {
   top: calc(50% - 80px);
   font-size: 80px;
   font-weight: 900;
-  line-height: 1.2;
   display: flex;
   align-items: center;
   right: calc(50% - 160px);
@@ -397,16 +396,6 @@ table {
           animation-fill-mode: forwards;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
-}
-.welcome__title .welcome__title_dot {
-  z-index: 2;
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #3AAFA9;
-  right: calc(50% - 160px);
-  top: calc(50% - 80px);
 }
 
 @-webkit-keyframes page-change {
@@ -423,12 +412,11 @@ table {
 .welcome__page {
   position: absolute;
   top: 0;
-  height: 100%;
   width: 100%;
+  height: 100vh;
   background: #3AAFA9;
   left: -50%;
   text-align: right;
-  height: 100vh;
   padding: 80px;
   -webkit-animation: page-change 2.5s linear;
           animation: page-change 2.5s linear;
@@ -490,12 +478,7 @@ table {
 
 .skills-block {
   background: #DEF2F1;
-  height: 100%;
   padding: 80px 160px 160px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .skill {
@@ -512,8 +495,6 @@ table {
 
 .skill__name {
   font-size: 32px;
-  font-weight: 400;
-  line-height: 1.2;
 }
 
 .skill__bar {
@@ -540,12 +521,10 @@ table {
 .active .skill__bar_per {
   height: 14px;
   background-color: #2B7278;
-  max-width: 680px;
   border-radius: 7px;
-  width: 100%;
   -webkit-animation: progress-bar 5s;
           animation: progress-bar 5s;
-  margin: 0 -1px;
+  margin: -1px;
 }
 
 .section {
@@ -554,26 +533,22 @@ table {
 }
 
 .section__item {
-  height: 100%;
   max-width: 600px;
-  margin: 0 160px 80px;
+  margin-bottom: 80px;
 }
 
 .section__item_name {
   margin-bottom: 30px;
   color: #FEFFFF;
-  line-height: 1.2;
 }
 
 .section__item_description {
   color: #FEFFFF;
-  line-height: 1.2;
 }
 
 .section__item_link {
   color: #2B7278;
-  line-height: 1.2;
-  margin-bottom: 80px;
+  margin-bottom: 0;
 }
 .section__item_link svg {
   margin: 2px 8px;
@@ -587,22 +562,22 @@ table {
 .projects__img {
   background-image: url("../img/img2.png");
   height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  width: 100%;
 }
 
-.section__list {
-  position: absolute;
-  min-height: 100vh;
+.section__projects {
+  position: relative;
+  padding: 80px 160px;
 }
 
 .projects__title {
   color: #2B7278;
   line-height: 1.2;
   opacity: 0;
-  padding: 80px 160px;
+  margin-bottom: 80px;
 }
 
 .mylib {
@@ -661,12 +636,12 @@ table {
 
 .experience {
   background: #DEF2F1;
+  padding: 80px 160px;
 }
 
 .experience__title {
   color: #17252A;
-  line-height: 1.2;
-  padding: 80px 160px;
+  margin-bottom: 80px;
 }
 
 .experience__label {
@@ -675,27 +650,21 @@ table {
 
 .experience .section__item_name {
   color: #17252A;
-  line-height: 1.2;
   margin-bottom: 0;
 }
 .experience .section__item_description {
   color: #17252A;
-  line-height: 1.2;
-}
-.experience .section__item_link {
-  margin-left: 160px;
+  margin-bottom: 10px;
 }
 
 .footer {
-  height: 100%;
   width: 100%;
-  padding: 80px 0;
+  padding: 80px;
 }
 .footer .menu__contact {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  padding: 0 80px;
   align-items: center;
 }
 .footer .label {
@@ -704,5 +673,4 @@ table {
 .footer .mail__to {
   font-size: 32px;
   font-weight: 900;
-  line-height: 1.2;
 }/*# sourceMappingURL=style.css.map */
