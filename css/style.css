@@ -87,21 +87,49 @@ table {
   line-height: 1.2;
 }
 
+@-webkit-keyframes scroll_animated {
+  99% {
+    transform: translate(5px, 5px) scale(0.8);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scroll_animated {
+  99% {
+    transform: translate(5px, 5px) scale(0.8);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes top_animated {
+  99% {
+    transform: rotate(90deg);
+    transition: 1s transform linear;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes top_animated {
+  99% {
+    transform: rotate(90deg);
+    transition: 1s transform linear;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .scroll {
   position: fixed;
   z-index: 25;
   bottom: 40px;
   right: 50%;
+  -webkit-animation: scroll_animated 500ms linear 11 alternate forwards;
+          animation: scroll_animated 500ms linear 11 alternate forwards;
 }
-
-.open .scroll {
-  right: 80px;
-}
-
-.off .scrolld {
-  opacity: 0;
-}
-
 .section__title {
   font-size: 80px;
   font-weight: 900;
@@ -109,10 +137,9 @@ table {
 }
 
 .back-to-top {
-  fill: #2B7278;
   position: fixed;
-  bottom: -100px;
-  right: 44px;
+  bottom: -150px;
+  left: 50%;
   cursor: pointer;
   transition: 0.3s all;
   z-index: 35;
@@ -123,13 +150,15 @@ table {
   transform: rotate(180deg);
 }
 
-.active-btn {
-  bottom: 50px;
-  transition: 0.4s all;
+.back_to_top__txt {
+  color: #2B7278;
 }
 
-.lock {
-  overflow: hidden;
+.active-btn {
+  bottom: -15px;
+  transition: transform 400ms ease 0ms;
+  -webkit-animation: top_animated 500ms linear infinite alternate forwards;
+          animation: top_animated 500ms linear infinite alternate forwards;
 }
 
 .border > * {
@@ -242,6 +271,22 @@ table {
 }
 .open .burger .burger__line {
   transform: scale(0);
+}
+
+.open .scroll {
+  right: 80px;
+}
+.open .welcome__title {
+  transform: translateX(-50%) scale(1);
+  transition-duration: 1000ms linear 0s;
+}
+.open .welcome__page {
+  right: 0;
+  transform: translateX(50%) scale(1);
+  transition: 500ms linear 0s;
+}
+.open .welcome__page_content {
+  margin: 0 80px;
 }
 
 .nav-social {
@@ -411,20 +456,6 @@ table {
   margin-bottom: 32px;
 }
 
-.open .welcome__title {
-  transform: translateX(-50%) scale(1);
-  transition-duration: 1000ms;
-}
-.open .welcome__page {
-  right: 0;
-  transform: translateX(50%) scale(1);
-  transition-duration: 1000ms;
-}
-.open .welcome__page_content {
-  right: 60px;
-  margin: 0 80px;
-}
-
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
   .welcome__page_content {
     opacity: 0;
@@ -514,6 +545,7 @@ table {
   width: 100%;
   -webkit-animation: progress-bar 5s;
           animation: progress-bar 5s;
+  margin: 0 -1px;
 }
 
 .section {
