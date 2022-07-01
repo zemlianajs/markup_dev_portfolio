@@ -1,10 +1,27 @@
-.switch
+.theme-switcher
     position: fixed
-    background: none
-    border: none
     right: 80px
     top: 43px 
-    z-index: 25
+    z-index: 25   
+    background: none
+    border: none
+    cursor: pointer
 
-    & .switch__sun
+.theme-switcher__sun, .theme-switcher__moon
+    fill: var(--btn-color)
+
+.theme-switcher__sun
+    display: none
+
+.dark-theme
+    .theme-switcher__sun
+        display: block
+    .theme-switcher__moon
         display: none
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px)
+
+.theme-switcher
+    right: 60px
+    top: 30px 

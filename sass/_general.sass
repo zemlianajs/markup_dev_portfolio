@@ -1,5 +1,5 @@
 .body
-    background: $bg-color-first
+    background: var(--bg-color)
     min-width: 1440px
     min-height: 100vh 
 
@@ -11,14 +11,16 @@
     font-family: $font-stack
     font-weight: $font-weight
     line-height: 1.2
+    color: var(--content-color)
 
 .link
     text-decoration: none
-    color: $content-color
+    color: var(--content-color)
 
 .label
     font-size: 18px
-    font-style: italic
+    font-style: italic    
+    color: var(--btn-color)
 
 .title    
     font-size: 32px
@@ -47,7 +49,9 @@
     bottom: 40px
     right: 50%
     animation: scroll_animated 500ms linear 11 alternate forwards
-    
+    & svg
+        fill: var(--btn-color)
+
 .section__title
     font-size: 80px
     font-weight: 900
@@ -55,7 +59,7 @@
 .back-to-top
     position: fixed
     bottom: -150px
-    left: 50%
+    right: 80px
     cursor: pointer
     transition: 0.3s all
     z-index: 35
@@ -63,9 +67,10 @@
     padding: 10px 12px
     & svg
         transform: rotate(180deg) 
+        fill: var(--btn-color)
 
 .back_to_top__txt
-    color: $btn-color        
+    color: var(--btn-color)       
 
 .active-btn
   bottom: -15px
@@ -74,3 +79,11 @@
 
 @media only screen and (min-width: 1024px) and (max-width: 1439px)
 
+.label
+    font-size: 16px
+
+.title    
+    font-size: 24px
+
+.text
+    font-size: 24px

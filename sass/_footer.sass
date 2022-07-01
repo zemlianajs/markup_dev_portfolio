@@ -1,15 +1,24 @@
 .footer
     width: 100%
     padding: 80px
+    background-color: var(--bg-color)
     & .menu__contact
         display: flex
         flex-direction: row-reverse
         justify-content: space-between
         align-items: center
-    & .label
-        color: $btn-color
     & .mail__to
         font-size: 32px
         font-weight: 900
 
+.mail__to_vector
+    margin: 5px 16px
+    fill: var(--content-color)
+
 @media only screen and (min-width: 1024px) and (max-width: 1439px)
+
+.footer
+    padding: 60px
+    & .mail__to
+        font-size: 24px
+        font-weight: 900

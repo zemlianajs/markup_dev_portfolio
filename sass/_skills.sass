@@ -1,5 +1,6 @@
 .skills-block
-    background: $bg-color-second
+    background-color: var(--bg-color-second)
+    color: var(--skills-experience-color)
     padding: 80px 160px 160px
 
 .skill 
@@ -17,10 +18,10 @@
 
 .skill__bar
     height: 14px
-    background-color: $bg-color-second    
+    background-color: var(--bg-color-second)    
     border-radius: 7px
     flex: 0 1 680px
-    border: 1px solid $btn-color
+    border: 1px solid var(--skill-bar-color)
 
 @keyframes progress-bar
   0%
@@ -30,7 +31,7 @@
 .active
     & .skill__bar_per
         height: 14px
-        background-color: $btn-color
+        background-color: var(--skill-bar-color)
         border-radius: 7px
         animation: progress-bar 5s
         margin: -1px

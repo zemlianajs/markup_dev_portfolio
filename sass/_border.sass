@@ -1,7 +1,7 @@
 .border > *
     position: fixed
     z-index: 20
-    background: $bg-color
+    background: var(--border-color)
 
 .border__top
     top: 0
@@ -28,3 +28,14 @@
     width: 80px
 
 @media only screen and (min-width: 1024px) and (max-width: 1439px)
+.border__top
+    height: 60px
+
+.border__bottom
+    height: 60px
+
+.border__left
+    width: 60px
+
+.border__right
+    width: 60px
