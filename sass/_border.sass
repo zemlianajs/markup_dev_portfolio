@@ -8,34 +8,38 @@
     left: 0
     width: 100%
     height: 80px
+    @media screen and (min-width: $large) and (max-width: $vlarge) 
+        height: 60px
+    @media screen and (min-width: $small) and (max-width: $medium) 
+        height: 0
 
 .border__bottom
     bottom: 0
     left: 0
     width: 100%
     height: 80px
+    @media screen and (min-width: $large) and (max-width: $vlarge) 
+        height: 60px
+    @media screen and (min-width: $small) and (max-width: $medium) 
+        height: 0
 
 .border__left
     top: 0
     left: 0
     height: 100%
     width: 80px
+    @media screen and (min-width: $large) and (max-width: $vlarge) 
+        width: 60px
+    @media screen and (min-width: $small) and (max-width: $medium) 
+        width: 0
 
 .border__right
     top: 0
     right: 0
     height: 100%
     width: 80px
+    @media screen and (min-width: $large) and (max-width: $vlarge) 
+        width: 60px
+    @media screen and (min-width: $small) and (max-width: $medium) 
+        width: 0
 
-@media only screen and (min-width: 1024px) and (max-width: 1439px)
-.border__top
-    height: 60px
-
-.border__bottom
-    height: 60px
-
-.border__left
-    width: 60px
-
-.border__right
-    width: 60px

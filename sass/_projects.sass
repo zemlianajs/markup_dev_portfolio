@@ -9,10 +9,11 @@
     background-repeat: no-repeat
     background-position: center
     position: absolute    
+    left: 0
+    top: 0
 
 .section__projects
     position: relative
-    padding: 80px 160px 
     color: var(--color-prjects)
 
 .projects__title
@@ -20,6 +21,8 @@
     line-height: 1.2
     opacity: 0
     margin-bottom: 80px
+    @media screen and (min-width: $large) and (max-width: $vlarge)
+        margin-bottom: 50px
 
 .mylib 
     opacity: 0

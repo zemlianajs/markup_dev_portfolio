@@ -1,6 +1,11 @@
 .open
     .scroll
         right: 80px
+        @media screen and (min-width: $large) and (max-width: $vlarge)
+            right: 60px
+
+    .wrapper
+        padding-left: 50%
 
     .welcome__title
         transform: translateX(-50%) scale(1)
@@ -12,7 +17,11 @@
         transition: 500ms linear 0s
 
     .welcome__page_content
-        margin: 0 80px
-
-@media only screen and (min-width: 1024px) and (max-width: 1439px)
-
+        margin-left: 0
+        @media screen and (min-width: $large) and (max-width: $vlarge)
+            margin-left: 50%
+    .section
+        padding-left: 20px
+    .footer
+        padding-left: 20px
+    

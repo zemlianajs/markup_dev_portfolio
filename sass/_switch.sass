@@ -6,6 +6,11 @@
     background: none
     border: none
     cursor: pointer
+    @media screen and (min-width: $large) and (max-width: $vlarge)
+        right: 60px
+        top: 30px 
+    @media screen and (min-width: $small) and (max-width: $medium) 
+        display: none
 
 .theme-switcher__sun, .theme-switcher__moon
     fill: var(--btn-color)
@@ -18,10 +23,3 @@
         display: block
     .theme-switcher__moon
         display: none
-
-
-@media only screen and (min-width: 1024px) and (max-width: 1439px)
-
-.theme-switcher
-    right: 60px
-    top: 30px 

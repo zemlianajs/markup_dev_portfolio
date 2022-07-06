@@ -1,7 +1,6 @@
 .skills-block
     background-color: var(--bg-color-second)
     color: var(--skills-experience-color)
-    padding: 80px 160px 160px
 
 .skill 
     display: flex
@@ -9,12 +8,20 @@
     justify-content: space-between
     margin-bottom: 32px
     flex-wrap: wrap
+    @media screen and (min-width: $large) and (max-width: $vlarge)
+        display: block
+        text-align: left
+        margin-bottom: 24px
 
 .skills-block_title
     margin-bottom: 32px
+    @media screen and (min-width: $large) and (max-width: $vlarge)
+        margin-bottom: 24px
     
 .skill__name
     font-size: 32px
+    @media screen and (min-width: $large) and (max-width: $vlarge)
+        font-size: 24px
 
 .skill__bar
     height: 14px
@@ -22,6 +29,8 @@
     border-radius: 7px
     flex: 0 1 680px
     border: 1px solid var(--skill-bar-color)
+    @media screen and (min-width: $large) and (max-width: $vlarge)
+        width: 680px
 
 @keyframes progress-bar
   0%

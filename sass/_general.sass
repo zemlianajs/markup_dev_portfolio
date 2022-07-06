@@ -1,11 +1,18 @@
 .body
     background: var(--bg-color)
-    min-width: 1440px
     min-height: 100vh 
 
 .lock
+    @media screen and (min-width: $large) and (max-width: $vlarge) 
+        overflow: hidden
+
+.lock
     & .wrapper
-        padding-left: 30%
+        padding-left: 50%
+        @media screen and (min-width: $large) and (max-width: $vlarge) 
+            padding-left: 0
+        @media screen and (min-width: $small) and (max-width: $medium)
+            padding-left: 0
 
 .wrapper
     font-family: $font-stack
@@ -21,14 +28,20 @@
     font-size: 18px
     font-style: italic    
     color: var(--btn-color)
+    @media screen and (min-width: $large) and (max-width: $vlarge)
+        font-size: 16px
 
 .title    
     font-size: 32px
     font-weight: 900
+    @media screen and (min-width: $large) and (max-width: $vlarge)
+        font-size: 24px
 
 .text
     font-size: 32px
     font-weight: 400
+    @media screen and (min-width: $large) and (max-width: $vlarge)
+        font-size: 24px
 
 @keyframes scroll_animated
     99%
@@ -55,6 +68,8 @@
 .section__title
     font-size: 80px
     font-weight: 900
+    @media screen and (min-width: $large) and (max-width: $vlarge)
+        font-size: 60px
 
 .back-to-top
     position: fixed
@@ -65,6 +80,8 @@
     z-index: 35
     text-decoration: none  
     padding: 10px 12px
+    @media screen and (min-width: $large) and (max-width: $vlarge)
+        right: 60px
     & svg
         transform: rotate(180deg) 
         fill: var(--btn-color)
@@ -77,13 +94,3 @@
   transition: transform 400ms ease 0ms
   animation: top_animated 500ms linear infinite alternate forwards
 
-@media only screen and (min-width: 1024px) and (max-width: 1439px)
-
-.label
-    font-size: 16px
-
-.title    
-    font-size: 24px
-
-.text
-    font-size: 24px

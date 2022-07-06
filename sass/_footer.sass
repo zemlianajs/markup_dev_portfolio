@@ -2,23 +2,27 @@
     width: 100%
     padding: 80px
     background-color: var(--bg-color)
+    @media screen and (min-width: $large) and (max-width: $vlarge)
+        padding: 60px
     & .menu__contact
         display: flex
         flex-direction: row-reverse
         justify-content: space-between
         align-items: center
+        .phone
+            margin-bottom: 0
+        @media screen and (min-width: $large) and (max-width: $vlarge)
+            font-size: 14px
+
     & .mail__to
         font-size: 32px
         font-weight: 900
+        @media screen and (min-width: $large) and (max-width: $vlarge)
+            font-size: 24px
 
 .mail__to_vector
     margin: 5px 16px
     fill: var(--content-color)
+    @media screen and (min-width: $large) and (max-width: $vlarge)
+        margin: 3px 10px
 
-@media only screen and (min-width: 1024px) and (max-width: 1439px)
-
-.footer
-    padding: 60px
-    & .mail__to
-        font-size: 24px
-        font-weight: 900
