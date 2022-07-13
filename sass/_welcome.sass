@@ -35,14 +35,35 @@
           right: calc(50% - 120px)
           font-size: 60px
         @media screen and (min-width: $small) and (max-width: $medium) 
-          top: 50%
-          right: 50%
-          font-size: 32px
+          top: 25%
+          font-size: 60px
+          animation: title-adapt 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both
+          animation-delay: 0.7s
+          left: calc(50% - 120px)
     
 @keyframes page-change
   80%,
   100%
     transform: translateX(50%)
+
+@keyframes page-content-adapt
+  0%
+    opacity: 0
+  50%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes title-adapt
+  0%
+    letter-spacing: -0.5em
+    transform: translateZ(-700px)
+    opacity: 0
+  40%
+    opacity: 0.6
+  100%
+    transform: translateZ(0)
+    opacity: 1
 
 .welcome__page
     position: absolute
@@ -61,22 +82,28 @@
     @media screen and (min-width: $large) and (max-width: $vlarge)
       padding: 60px
     @media screen and (min-width: $small) and (max-width: $medium) 
-      padding: 40px
+      padding: 20px
     
 .welcome__page_content
     position: absolute
     max-width: 500px
-    text-align: left
-    top: calc(50% - 160px)
+    text-align: left    
     margin-left: 160px
     transition-duration: 1000ms
+    @media screen and (min-width: $big)
+      top: calc(50% - 160px)
     @media screen and (min-width: $large) and (max-width: $vlarge)
       margin-left: 120px
       top: calc(50% - 120px)
       max-width: 400px
+      animation: page-content-adapt 5s linear 
+      animation-fill-mode: forwards
     @media screen and (min-width: $small) and (max-width: $medium) 
-      width: 100%
-      margin-left: 40px
+      max-width: 300px
+      margin-left: 0
+      bottom: 20px
+      animation: page-content-adapt 5s linear 
+      animation-fill-mode: forwards
 
 .welcome__page_label
     color: var(--welcome-page-label-color)
@@ -85,4 +112,6 @@
     margin-bottom: 32px
     @media screen and (min-width: $large) and (max-width: $vlarge)
       margin-bottom: 24px
+    @media screen and (min-width: $small) and (max-width: $medium) 
+      margin-bottom: 18px
 

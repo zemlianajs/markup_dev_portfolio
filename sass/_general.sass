@@ -30,11 +30,15 @@
     color: var(--btn-color)
     @media screen and (min-width: $large) and (max-width: $vlarge)
         font-size: 16px
+    @media screen and (min-width: $small) and (max-width: $medium)
+        font-size: 12px
 
 .title    
     font-size: 32px
     font-weight: 900
     @media screen and (min-width: $large) and (max-width: $vlarge)
+        font-size: 24px
+    @media screen and (min-width: $small) and (max-width: $medium)
         font-size: 24px
 
 .text
@@ -42,6 +46,8 @@
     font-weight: 400
     @media screen and (min-width: $large) and (max-width: $vlarge)
         font-size: 24px
+    @media screen and (min-width: $small) and (max-width: $medium)
+        font-size: 18px
 
 @keyframes scroll_animated
     99%
@@ -62,14 +68,10 @@
     bottom: 40px
     right: 50%
     animation: scroll_animated 500ms linear 11 alternate forwards
+    @media screen and (min-width: $small) and (max-width: $medium)
+        right: 20px
     & svg
         fill: var(--btn-color)
-
-.section__title
-    font-size: 80px
-    font-weight: 900
-    @media screen and (min-width: $large) and (max-width: $vlarge)
-        font-size: 60px
 
 .back-to-top
     position: fixed
