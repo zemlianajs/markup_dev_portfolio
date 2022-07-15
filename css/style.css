@@ -341,17 +341,10 @@ table {
 }
 @media screen and (min-width: 300px) and (max-width: 729px) {
   .logo {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 300px) and (max-width: 729px) {
-  .open .logo {
     position: absolute;
-    display: block;
+    font-size: 14px;
     top: 20px;
     left: 20px;
-    font-size: 16px;
   }
 }
 
@@ -1156,7 +1149,7 @@ table {
 }
 @media screen and (max-width: 729px) {
   .footer {
-    padding: 20px;
+    padding: 40px;
   }
 }
 .footer .menu__contact {
@@ -1176,12 +1169,11 @@ table {
 }
 @media screen and (max-width: 1439px) {
   .footer .menu__contact .phone {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 500px) {
   .footer .menu__contact .phone {
-    font-size: 12px;
     padding-top: 20px;
   }
 }
