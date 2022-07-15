@@ -4,25 +4,37 @@
     background-color: var(--bg-color)
     @media screen and (min-width: $large) and (max-width: $vlarge)
         padding: 60px
+    @media screen and (max-width: $medium)
+        padding: 20px
     & .menu__contact
         display: flex
         flex-direction: row-reverse
         justify-content: space-between
         align-items: center
+        @media screen and (max-width: $msmall)
+            flex-direction: column-reverse
+            align-items: flex-start
         .phone
             margin-bottom: 0
-        @media screen and (min-width: $large) and (max-width: $vlarge)
-            font-size: 14px
+            @media screen and (max-width: $vlarge)
+                font-size: 14px
+            @media screen and (max-width: $msmall)
+                font-size: 12px
+                padding-top: 20px
 
     & .mail__to
         font-size: 32px
         font-weight: 900
-        @media screen and (min-width: $large) and (max-width: $vlarge)
+        @media screen and (min-width: $msmall) and (max-width: $vlarge)
             font-size: 24px
+        @media screen and (max-width: $msmall)
+            font-size: 18px
 
 .mail__to_vector
     margin: 5px 16px
     fill: var(--content-color)
-    @media screen and (min-width: $large) and (max-width: $vlarge)
+    @media screen and (max-width: $vlarge)
         margin: 3px 10px
+    @media screen and (max-width: $msmall)
+        margin: 2px 5px
 

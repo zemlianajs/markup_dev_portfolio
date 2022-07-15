@@ -230,6 +230,11 @@ table {
     right: 60px;
   }
 }
+@media screen and (max-width: 729px) {
+  .back-to-top {
+    right: 0;
+  }
+}
 .back-to-top svg {
   transform: rotate(180deg);
   fill: var(--btn-color);
@@ -730,6 +735,7 @@ table {
 @media screen and (min-width: 300px) and (max-width: 729px) {
   .welcome__title .welcome__title_text {
     top: 25%;
+    right: 0;
     font-size: 60px;
     -webkit-animation: title-adapt 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
             animation: title-adapt 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
@@ -852,7 +858,18 @@ table {
             animation-fill-mode: forwards;
   }
 }
-@media screen and (min-width: 300px) and (max-width: 729px) {
+@media screen and (max-width: 729px) {
+  .welcome__page_content {
+    max-width: 400px;
+    margin-left: 40px;
+    bottom: 40px;
+    -webkit-animation: page-content-adapt 5s linear;
+            animation: page-content-adapt 5s linear;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+@media screen and (max-width: 500px) {
   .welcome__page_content {
     max-width: 300px;
     margin-left: 0;
@@ -890,6 +907,77 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media screen and (max-width: 729px) {
+  .parallax__img1 {
+    display: none;
+  }
+}
+
+.section {
+  min-height: 100%;
+  width: 100%;
+  padding: 80px 160px;
+}
+@media screen and (min-width: 730px) and (max-width: 1439px) {
+  .section {
+    padding: 60px 150px;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 729px) {
+  .section {
+    padding: 20px;
+  }
+}
+
+.section__title {
+  font-size: 80px;
+  font-weight: 900;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 1439px) {
+  .section__title {
+    font-size: 60px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .section__title {
+    font-size: 40px;
+  }
+}
+
+.section__item {
+  max-width: 600px;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 1439px) {
+  .section__item {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 729px) {
+  .section__item {
+    width: 100%;
+  }
+}
+
+.section__item_name {
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1439px) {
+  .section__item_name {
+    margin-bottom: 20px;
+  }
+}
+
+.section__item_link {
+  margin-bottom: 0;
+}
+.section__item_link svg {
+  margin: 2px 8px;
+  fill: var(--btn-color);
+}
+
 .skills-block {
   background-color: var(--bg-color-second);
   color: var(--skills-experience-color);
@@ -922,7 +1010,7 @@ table {
 .skill__name {
   font-size: 32px;
 }
-@media screen and (min-width: 730px) and (max-width: 1439px) {
+@media screen and (max-width: 1439px) {
   .skill__name {
     font-size: 24px;
   }
@@ -963,75 +1051,6 @@ table {
   margin: -1px;
 }
 
-.section {
-  min-height: 100vh;
-  width: 100%;
-  padding: 80px 160px;
-}
-@media screen and (min-width: 730px) and (max-width: 1439px) {
-  .section {
-    padding: 60px 150px;
-  }
-}
-@media screen and (min-width: 300px) and (max-width: 729px) {
-  .section {
-    padding: 40px;
-  }
-}
-
-.section__title {
-  font-size: 80px;
-  font-weight: 900;
-}
-@media screen and (min-width: 730px) and (max-width: 1439px) {
-  .section__title {
-    font-size: 60px;
-  }
-}
-@media screen and (min-width: 300px) and (max-width: 729px) {
-  .section__title {
-    font-size: 40px;
-  }
-}
-
-.section__item {
-  max-width: 600px;
-  margin-bottom: 80px;
-}
-@media screen and (min-width: 730px) and (max-width: 1439px) {
-  .section__item {
-    margin-bottom: 50px;
-  }
-  .section__item:last-child {
-    margin-bottom: 0;
-  }
-}
-@media screen and (min-width: 300px) and (max-width: 729px) {
-  .section__item {
-    width: 100%;
-  }
-  .section__item:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.section__item_name {
-  margin-bottom: 30px;
-}
-@media screen and (min-width: 730px) and (max-width: 1439px) {
-  .section__item_name {
-    margin-bottom: 20px;
-  }
-}
-
-.section__item_link {
-  margin-bottom: 0;
-}
-.section__item_link svg {
-  margin: 2px 8px;
-  fill: var(--btn-color);
-}
-
 .projects {
   background: var(--bg-color-prjects);
   position: relative;
@@ -1057,12 +1076,6 @@ table {
   color: var(--title-prjects);
   line-height: 1.2;
   opacity: 0;
-  margin-bottom: 80px;
-}
-@media screen and (min-width: 730px) and (max-width: 1439px) {
-  .projects__title {
-    margin-bottom: 50px;
-  }
 }
 
 .mylib {
@@ -1124,15 +1137,6 @@ table {
   color: var(--skills-experience-color);
 }
 
-.experience__title {
-  margin-bottom: 80px;
-}
-@media screen and (min-width: 730px) and (max-width: 1439px) {
-  .experience__title {
-    margin-bottom: 40px;
-  }
-}
-
 .experience .section__item_name {
   margin-bottom: 0;
 }
@@ -1150,27 +1154,49 @@ table {
     padding: 60px;
   }
 }
+@media screen and (max-width: 729px) {
+  .footer {
+    padding: 20px;
+  }
+}
 .footer .menu__contact {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 500px) {
+  .footer .menu__contact {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
 .footer .menu__contact .phone {
   margin-bottom: 0;
 }
-@media screen and (min-width: 730px) and (max-width: 1439px) {
-  .footer .menu__contact {
+@media screen and (max-width: 1439px) {
+  .footer .menu__contact .phone {
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footer .menu__contact .phone {
+    font-size: 12px;
+    padding-top: 20px;
   }
 }
 .footer .mail__to {
   font-size: 32px;
   font-weight: 900;
 }
-@media screen and (min-width: 730px) and (max-width: 1439px) {
+@media screen and (min-width: 500px) and (max-width: 1439px) {
   .footer .mail__to {
     font-size: 24px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footer .mail__to {
+    font-size: 18px;
   }
 }
 
@@ -1178,8 +1204,13 @@ table {
   margin: 5px 16px;
   fill: var(--content-color);
 }
-@media screen and (min-width: 730px) and (max-width: 1439px) {
+@media screen and (max-width: 1439px) {
   .mail__to_vector {
     margin: 3px 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .mail__to_vector {
+    margin: 2px 5px;
   }
 }/*# sourceMappingURL=style.css.map */

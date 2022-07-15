@@ -36,6 +36,7 @@
           font-size: 60px
         @media screen and (min-width: $small) and (max-width: $medium) 
           top: 25%
+          right: 0
           font-size: 60px
           animation: title-adapt 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both
           animation-delay: 0.7s
@@ -98,7 +99,13 @@
       max-width: 400px
       animation: page-content-adapt 5s linear 
       animation-fill-mode: forwards
-    @media screen and (min-width: $small) and (max-width: $medium) 
+    @media screen and (max-width: $medium) 
+      max-width: 400px
+      margin-left: 40px
+      bottom: 40px
+      animation: page-content-adapt 5s linear 
+      animation-fill-mode: forwards
+    @media screen and (max-width: $msmall)
       max-width: 300px
       margin-left: 0
       bottom: 20px
