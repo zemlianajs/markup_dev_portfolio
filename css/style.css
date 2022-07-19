@@ -345,17 +345,22 @@ table {
     font-size: 14px;
     top: 20px;
     left: 20px;
+    z-index: 1;
   }
 }
 
 .theme-switcher {
   position: fixed;
-  right: 80px;
   top: 43px;
   z-index: 25;
   background: none;
   border: none;
   cursor: pointer;
+}
+@media screen and (min-width: 1440px) {
+  .theme-switcher {
+    right: 80px;
+  }
 }
 .theme-switcher:hover {
   transform: rotate(360deg) scale(1.2);
@@ -386,6 +391,14 @@ table {
 }
 .dark-theme .theme-switcher__moon {
   display: none;
+}
+
+@media screen and (min-width: 300px) and (max-width: 729px) {
+  .open .theme-switcher {
+    display: block;
+    top: 20px;
+    left: 20px;
+  }
 }
 
 .burger {
@@ -605,11 +618,14 @@ table {
   transition: all 0.3s linear 0s;
 }
 
+.open .nav-social {
+  transition: all 0.3s linear 1s;
+}
 @media screen and (min-width: 300px) and (max-width: 729px) {
   .open .nav-social {
     display: block;
     bottom: 60px;
-    left: 10px;
+    left: 50px;
   }
 }
 
@@ -656,7 +672,7 @@ table {
 }
 @media screen and (min-width: 300px) and (max-width: 729px) {
   .open .menu {
-    padding: 60px 60px 40px;
+    padding: 80px 60px 40px;
   }
 }
 .open .menu__list {
