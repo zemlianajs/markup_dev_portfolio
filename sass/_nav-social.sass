@@ -2,22 +2,36 @@
     position: fixed
     display: flex
     flex-direction: column
-    height: 100%
-    justify-content: center
-    right: 0
-    top: 0
-    width: 80px 
+    justify-content: center    
     align-items: center
+    //min-height: 100vh
     z-index: 25
+    @media screen and (min-width: $big) 
+        width: 80px         
+        top: calc( 50% - 120px )
+        right: 0
     @media screen and (min-width: $large) and (max-width: $vlarge)
         width: 60px
+        top: calc( 50% - 120px )
+        right: 0
     @media screen and (min-width: $small) and (max-width: $medium) 
         display: none
     
     & .nav-social__link
         margin: 10px
+        text-decoration: none
         & svg
             fill: var(--btn-color)
         &:hover             
             transform: rotate(360deg) scale(1.2)
             transition: all 0.3s linear 0s
+
+.open
+    .nav-social
+        @media screen and (min-width: $small) and (max-width: $medium)
+            display: block
+            bottom: 60px
+            left: 10px
+
+
+        

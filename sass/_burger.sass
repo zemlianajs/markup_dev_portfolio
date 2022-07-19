@@ -66,16 +66,29 @@
     display: block
     position: fixed
     top: 50%
-    left: 22px
     z-index: 25
-    &:hover    
+    @media screen and (min-width: $big)
+      left: 22px
+      &:hover    
         transform: rotate(180deg) scale(1.2)
         transition: all 0.3s linear 0s
+    @media screen and (min-width: $small) and (max-width: $medium) 
+      top: 20px
+      right: 20px
+      height: 48px
+      background: var(--bg-color-second)
+      opacity: 0.7
+      border-radius: 50%
 
     &:before, &:after
       background-color: var(--btn-color)
       top: 13px
       width: 32px
+      @media screen and (min-width: $small) and (max-width: $medium) 
+        width: 26px
+        height: 2px
+        left: 11px
+        top: 23px
 
     &:before
       transform: rotate(45deg)

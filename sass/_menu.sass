@@ -1,14 +1,20 @@
 .menu
     position: fixed
     top: 0
-    width: 50%
-    left: -50%
     min-height: 100vh
     background: var(--bg-color)
     transition: 0.7s ease 0s
+    @media screen and (min-width: $big)
+        width: 50%
+        left: -50%
     @media screen and (min-width: $large) and (max-width: $lmedium)
         width: 100%
         left: -100%
+    @media screen and (min-width: $small) and (max-width: $medium) 
+        width: 100%
+        left: -100%
+    & .nav-social
+        display: none
 
 .open
     .menu
@@ -19,15 +25,17 @@
         transition: 0.7s ease 0s
         @media screen and (min-width: $large) and (max-width: $vlarge)
             padding: 120px 120px 32px
+        @media screen and (min-width: $small) and (max-width: $medium)
+            padding: 60px 60px 40px
 
     .menu__list
         margin-bottom: 80px
-        @media screen and (min-width: $large) and (max-width: $vlarge)
+        @media screen and (max-width: $vlarge)
             margin-bottom: 50px
 
     .menu__item
         margin-bottom: 32px
-        @media screen and (min-width: $large) and (max-width: $vlarge)
+        @media screen and (max-width: $vlarge)
             margin-bottom: 24px
 
         &:last-child
@@ -36,7 +44,7 @@
     .menu__item_link
         font-size: 32px
         font-weight: 900
-        @media screen and (min-width: $large) and (max-width: $vlarge)
+        @media screen and (max-width: $vlarge)
             font-size: 24px
         &:hover 
             font-size: 36px
@@ -46,7 +54,7 @@
     .menu__contact
         .phone
             margin-bottom: 80px
-            @media screen and (min-width: $large) and (max-width: $vlarge)
+            @media screen and (max-width: $vlarge)
                 margin-bottom: 50px
                 font-size: 14px
 
@@ -57,12 +65,14 @@
     .mail__to
         font-size: 32px
         font-weight: 900
-        @media screen and (min-width: $large) and (max-width: $vlarge)
+        @media screen and (max-width: $vlarge)
             font-size: 24px
 
     .mail__to_vector
         margin: 6px 16px
         fill: var(--content-color)
-        @media screen and (min-width: $large) and (max-width: $vlarge)
+        @media screen and (max-width: $vlarge)
             margin: 3px 10px
+
+
 
