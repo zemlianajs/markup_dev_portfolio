@@ -122,14 +122,9 @@ table {
   font-style: italic;
   color: var(--btn-color);
 }
-@media screen and (min-width: 730px) and (max-width: 1439px) {
+@media screen and (max-width: 1439px) {
   .label {
     font-size: 16px;
-  }
-}
-@media screen and (min-width: 300px) and (max-width: 729px) {
-  .label {
-    font-size: 12px;
   }
 }
 
@@ -137,12 +132,7 @@ table {
   font-size: 32px;
   font-weight: 900;
 }
-@media screen and (min-width: 730px) and (max-width: 1439px) {
-  .title {
-    font-size: 24px;
-  }
-}
-@media screen and (min-width: 300px) and (max-width: 729px) {
+@media screen and (max-width: 1439px) {
   .title {
     font-size: 24px;
   }
@@ -429,8 +419,8 @@ table {
 }
 @media screen and (min-width: 300px) and (max-width: 729px) {
   .burger {
-    top: 25px;
-    right: 25px;
+    top: 20px;
+    right: 20px;
     height: 48px;
     background: var(--bg-color);
     opacity: 0.7;
@@ -508,7 +498,7 @@ table {
     top: 20px;
     right: 20px;
     height: 48px;
-    background: var(--bg-color-second);
+    background: var(--bg-color);
     opacity: 0.7;
     border-radius: 50%;
   }
@@ -578,6 +568,11 @@ table {
 .open .footer {
   padding-left: 20px;
 }
+@media screen and (min-width: 300px) and (max-width: 908px) {
+  .open .back-to-top {
+    display: none;
+  }
+}
 
 .nav-social {
   position: fixed;
@@ -630,6 +625,7 @@ table {
 }
 
 .menu {
+  display: none;
   position: fixed;
   top: 0;
   min-height: 100vh;
@@ -642,20 +638,11 @@ table {
     left: -50%;
   }
 }
-@media screen and (min-width: 730px) and (max-width: 908px) {
+@media screen and (min-width: 300px) and (max-width: 908px) {
   .menu {
     width: 100%;
     left: -100%;
   }
-}
-@media screen and (min-width: 300px) and (max-width: 729px) {
-  .menu {
-    width: 100%;
-    left: -100%;
-  }
-}
-.menu .nav-social {
-  display: none;
 }
 
 .open .menu {
@@ -1254,14 +1241,9 @@ table {
   font-size: 32px;
   font-weight: 900;
 }
-@media screen and (min-width: 500px) and (max-width: 1439px) {
+@media screen and (max-width: 1439px) {
   .footer .mail__to {
     font-size: 24px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .footer .mail__to {
-    font-size: 18px;
   }
 }
 
@@ -1272,10 +1254,5 @@ table {
 @media screen and (max-width: 1439px) {
   .mail__to_vector {
     margin: 3px 10px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .mail__to_vector {
-    margin: 2px 5px;
   }
 }/*# sourceMappingURL=style.css.map */
